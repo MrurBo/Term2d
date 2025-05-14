@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <sstream>
 #include <cstring>
+#include <iostream>
 
 namespace term2d {
 
