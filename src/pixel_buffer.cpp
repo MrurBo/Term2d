@@ -24,12 +24,12 @@ void PixelBuffer::set_pixel(int x, int y, const Color& color) {
 }
 
 void PixelBuffer::render(bool force_full_redraw) {
-    static std::vector<std::vector<Color>> last_frame = front_buffer;
+    static std::vector<std::vector<Color> > last_frame = front_buffer;
     std::stringstream output;
 
     if (force_full_redraw) {
         output << "\033[2J\033[H";
-        last_frame = std::vector<std::vector<Color>>(height, std::vector<Color>(width, Color(-1, -1, -1));
+        last_frame = std::vector<std::vector<Color> >(height, std::vector<Color>(width, Color(-1, -1, -1));
     } else {
         output << "\033[H";
     }
