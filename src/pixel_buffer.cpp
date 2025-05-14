@@ -29,7 +29,7 @@ void PixelBuffer::render(bool force_full_redraw) {
 
     if (force_full_redraw) {
         output << "\033[2J\033[H";
-        last_frame = std::vector<std::vector<Color> >(height, std::vector<Color>(width, Color(-1, -1, -1));
+        last_frame = std::vector<std::vector<Color> >(height, std::vector<Color>(width, Color(-1, -1, -1)));
     } else {
         output << "\033[H";
     }
